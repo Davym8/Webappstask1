@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<html>
+    <body style="background-color: gray;">
+<head>
+<title> SIT120 Practical task week 1</title>
+<style>
+body { margin: 0;}
+.header {
+  text-align: center;
+}
+    h1 {color: rgb(255, 83, 112);}
+    h2 {color: red;}
+    p1 {color: rgb(2, 255, 57);}
+    .column {
+            float: left;
+            width: 33%;
+            height: 100%;
+        
+        }
+    .columnafter {
+        float: left;
+        width: 33%;
+        height: 100%;
+    
+    }
+</style> 
+</head>
+<body>
+    <div class="header">
+    <h1>Week 1 practical task</h1>    
+    <div class="column" style="background-color: indigo;">
+    <h2> This week we learn't how to create a website.</h2>
+    <p1> HTML is a language which uses tags instead of functions to create and style programs</p1>
+    <img src="memes.png" width="300" height="400">
+    <p style="color: rgb(255, 238, 0);"> why does this keep on happening :( </p>
+    </div>
+    <div class="columnafter">
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+            </style>
+        <table style="margin-top: 250px; margin-left: 200px;">
+            <tr>
+                <th style="color: lawngreen;">click the button</th>
+                <th style="color: lawngreen;">or click this button</th>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="location.href='https://chrismckenzie.com/'" type="button"> click me
+                    </button>
+                </td>
+                <td>
+                    <button onclick="location.href='https://www.youtube.com/watch?v=ZZ5LpwO-An4'" type="button"> click me
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <h1>Calculate student scores</h1>
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <table style="margin: auto;">
+        <tr>Student Name</tr>
+        <td>Name
+            <label>
+                <input type="text" id="name" name="name" value="Enter Name">
+            </label>
+        </td>
+        <td>Score
+            <label>
+                <input type="text" id="score" name="score" value="">
+            </label>
+        </td>
+        <td>Score 2
+            <label>
+                <input type="text" id="score2" name="score" value="">
+            </label>
+        </td>
+        <td>Score 3
+            <label>
+                <input type="text" id="score3" name="score" value="">
+            </label>
+        </td>
+        </table>
+        <button onclick="calculate()">Calculate</button>
+        <h3 id="answer"></h3>
+        <script>
+            function calculate()
+            {
+                var field1=document.getElementById("score").value;
+                var field2=document.getElementById("score2").value;
+                var field3=document.getElementById("score3").value;
+
+                var input=parseFloat(field1)+parseFloat(field2)+parseFloat(field3);
+                var result = input / 3;
+                if(!isNaN(result))
+                {
+                    document.getElementById("answer").innerHTML="the average is " + result;
+                }
+            }
+        </script>
+    </div>
+    <link rel="stylesheet" href="stylesheet.css">   
+    <div class="footer">
+        <p>“There is nothing noble in being superior to your fellow man; true nobility is being superior to your former self.”
+
+            ― Ernest Hemingway</p>
+    </div>
+     <div class="columnafter">
+        <div class="vidoeframe">
+            <iframe width="420" height="420" src="https://www.youtube.com/embed/LDU_Txk06tM?autoplay=1&loop=1"></iframe>
+        </div>
+        
+     </div>
+
+</body>
+</html>
